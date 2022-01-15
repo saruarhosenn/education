@@ -1,0 +1,29 @@
+/* LG Screen */
+@media (max-width: 1199px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+/* MD Screen */
+@media (max-width: 991px) {
+	.container {
+		max-width: 720px;
+	}
+}
+
+/* SM Screen */
+@media (max-width: 767px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+/* Mobail Screen */
+@media (max-width: 575px) {
+	.container {
+		max-width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
