@@ -67,11 +67,6 @@ Start Reuseble Components
 	margin-right: auto;
 }
 
-/* 
-=====================================
-Start Reuseble Components
-=====================================
-*/
 .title {
 	font-size: var(--size-xl);
 	text-align: center;
@@ -138,12 +133,26 @@ Start Reuseble Components
 	-ms-border-radius: 35px;
 	-o-border-radius: 35px;
 }
+/* 
+=====================================
+End Reuseble Components
+=====================================
+*/
+
 
 /* 
 =====================================
 Start Header Section
 =====================================
 */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
 header .header-top-content {
 	padding: 10px 0;
 	background-color: var(--bg-color);
@@ -172,7 +181,7 @@ NavBar
 }
 
 header nav {
-	padding: 40px 0;
+	padding: 20px 0;
 	background-color: var(--secondary-color);
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -181,7 +190,7 @@ header nav {
 	display: inline-block;
 }
 
-.main-menu ul li a {
+.main-menu ul li:not(:last-child) a {
 	font-family: 'Lato-700';
 	color: var(--primary-color);
 	text-transform: uppercase;
@@ -199,26 +208,127 @@ End Header Section
 
 /* 
 =====================================
-Start Section
+Start Hero Section
+=====================================
+*/
+.hero-section {
+	background: url(../images/hero/hero-banner.jpg) no-repeat center / cover ;
+	background-color: rgba(3, 13, 40, 0.7);
+	background-blend-mode: overlay;
+	padding: 360px 0;
+}
+
+.hero-text {
+	text-align: center;
+}
+
+.hero-text h1 {
+	font-family: 'Lato-700';
+	font-size: 110px;
+	color: var(--secondary-color);
+	margin-bottom: 30px;
+	line-height: 110px;
+}
+/* 
+=====================================
+End Hero Section
 =====================================
 */
 
+
 /* 
 =====================================
-End Section
+Start Learning Center Section
 =====================================
 */
+.grid-row,
+.learning-container,
+.learning-left-content  {
+	position: relative;
+}
 
+.grid-row {
+	position: absolute;
+    left: 0;
+    top: -201px;
+    background-color: #FFF;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-column-gap: 212px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+	padding: 77px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+}
 
+.grid-row::after {
+	content: "";
+	width: 440px;
+	height: 11px;
+	background-color: var(--bg-color);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -11px;
+	margin: auto;
+	border-radius: 0 0 20px 20px;
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+	-ms-border-radius: 0 0 20px 20px;
+	-o-border-radius: 0 0 20px 20px;
+}
+
+.learning-left-content::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -107px;
+	width: 2px;
+	height: 260px;
+	background-color: #CCCCCC;
+}
+
+.learning-left-content p:first-child {
+	font-size: var(--size-xl);
+	line-height: 44px;
+}
+
+.learning-left-content p:nth-child(2) {
+	margin: 11px 0 23px;
+}
+
+.learning-icon {
+	margin-right: 14px;
+}
+
+.learning-content {
+	display: flex;
+}
+
+.learning-text p {
+	font-size: 26px;
+}
+
+.learning-text span {
+	font-family: 'Lato-700';
+	font-size: var(--size-sm);
+	margin-top: -5px;
+	display: block;
+}
+
+.learning-content:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.learning-content:not(:last-child) .learning-text {
+	margin-left: 8px;
+}
 /* 
 =====================================
-Start Section
-=====================================
-*/
-
-/* 
-=====================================
-End Section
+End Learning Center Section
 =====================================
 */
 
